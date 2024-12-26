@@ -1,6 +1,11 @@
-plugins {
-    id 'com.browserstack.gradle-tool'
+buildscript {
+    repositories {
+        ...
+        mavenCentral()
     }
-dependencies {
-    androidTestImplementation group: 'com.browserstack', name: 'browserstack-java-sdk', version: '1.21.0'
+    dependencies {
+        ...
+        classpath 'com.android.tools.build:gradle:<AGP_version>'
+        classpath 'com.browserstack:gradle-tool:1.0.0'
+    }
 }
